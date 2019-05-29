@@ -60,7 +60,7 @@ class InteractiveWaveBox extends D3Component {
       line.attr('x2', coords[0])
         .attr('y2', coords[1])
 
-      waves.selectAll('circle').transition('circle')
+      waves.selectAll('circle').transition()
         .style('stroke-opacity', 0)
         .remove()
 
