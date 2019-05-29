@@ -27,7 +27,7 @@ class WaveBox extends D3Component {
 
   spawnWave(svg) {
     let circle = svg.append('circle')
-      .attr('r', 0)
+      .attr('r', 20)
       .attr('cx', size * 0.5)
       .attr('cy', size * 0.5)
       .style('z-index', -1)
