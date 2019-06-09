@@ -69,8 +69,8 @@ class InteractiveWaveBox extends D3Component {
         .remove()
     })
 
-    setTimeout(() => this.spawnWave(waves), 400)
-    setTimeout(() => this.particleTrail(particles), 100)
+    setInterval(() => this.spawnWave(waves), 400)
+    setInterval(() => this.particleTrail(particles), 100)
   }
 
   spawnWave(svg) {
@@ -88,8 +88,6 @@ class InteractiveWaveBox extends D3Component {
       .attr('cy', size * (0.5 - this.state.vy * 2))
       .ease(d3.easeLinear)
       .remove()
-
-    setTimeout(() => this.spawnWave(svg), 400)
   }
 
   particleTrail(svg) {
@@ -107,8 +105,6 @@ class InteractiveWaveBox extends D3Component {
       .attr('opacity', 0)
       .ease(d3.easeLinear)
       .remove()
-
-    setTimeout(() => this.particleTrail(svg), 100)
   }
 }
 

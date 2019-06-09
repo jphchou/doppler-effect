@@ -22,7 +22,7 @@ class WaveBox extends D3Component {
       .style('fill', '#5577ff')
       .style('z-index', 1)
 
-    setTimeout(() => this.spawnWave(waves), 400)
+    setInterval(() => this.spawnWave(waves), 400)
   }
 
   spawnWave(svg) {
@@ -39,8 +39,6 @@ class WaveBox extends D3Component {
       .attr('r', size)
       .ease(d3.easeLinear)
       .remove()
-
-    setTimeout(() => this.spawnWave(svg), 400)
   }
 }
 
