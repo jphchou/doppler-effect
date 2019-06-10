@@ -20,4 +20,46 @@ Cool description.
 [WaveBox/]
 [InteractiveWaveBox/]
 
+## Test Your Knowledge
+[var name:"redshift" value:`Math.random() >= 0.5` /]
+[var name:"change" value:`Math.floor(Math.random() * 25) + 50` /]
+[var name:"hue" value:`redshift ? Math.floor(Math.random() * (255 - change)) + change : Math.floor(Math.random() * (255 - change))` /]
+[var name:"userChoice" value:null /]
+[var name:"correctAnswer" value:null /]
+[var name:"hasAnswered" value:false/]
+
+Hover over the star to change the perceived frequency.
+
+[QuizHover direction:`redshift ? -1 : 1` hue:`hue` change:`change`/]
+
+
+[Conditional if:`!hasAnswered`]
+Which direction is this star moving relative to the observer?
+  [Radio value:userChoice options:`["Towards", "Away"]`  /]
+  [button onClick:`
+    if (userChoice === "Towards" || userChoice === "Away") {
+      correctAnswer = userChoice === (redshift ? "Towards" : "Away")
+      hasAnswered = true
+    }
+  `]Submit[/button]
+[/Conditional]
+
+[Conditional if:`hasAnswered`]
+  [Conditional if:`correctAnswer`]**Correct!**[/Conditional]
+  [Conditional if:`!correctAnswer`]**Incorrect.**[/Conditional]
+
+  [Conditional if:`redshift`]The star is moving towards the observer, so it undergoes **redshift** and the perceived frequency is higher.[/Conditional]
+  [Conditional if:`!redshift`]The star is moving away from the observer, so it undergoes **blueshift** and the perceived frequency is lower.[/Conditional]
+
+  [button onClick:`
+    userChoice = null
+    correctAnswer = null
+    hasAnswered = false
+    redshift = Math.random() >= 0.5
+    change = Math.floor(Math.random() * 25) + 50
+    hue = redshift ? Math.floor(Math.random() * (255 - change)) + change : Math.floor(Math.random() * (255 - change))
+  `]Reset[/button]
+[/Conditional]
+
+
 [/section]

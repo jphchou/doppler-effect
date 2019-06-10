@@ -4,6 +4,10 @@
   max-height: 300px;
 }
 
+label {
+  margin-right: 1rem;
+}
+
 @media all and (max-width: 1000px) {
   .d3-component svg {
     max-height: 200px;
