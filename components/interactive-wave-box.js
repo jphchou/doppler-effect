@@ -84,9 +84,8 @@ class InteractiveWaveBox extends D3Component {
         .style('fill', '#555555')
       }
     }
-    var t0 = Date.now()
+    
     d3.timer(function () {
-      var delta = (Date.now() - t0)
       svg.selectAll(".bggrid")
         .attr('cx', function (d) {
           return component.modulo((d3.select(this).attr('cx') - component.state.vx * 2), size)
@@ -94,15 +93,6 @@ class InteractiveWaveBox extends D3Component {
         .attr('cy', function (d) {
           return component.modulo((d3.select(this).attr('cy') - component.state.vy * 2), size)
         })
-
-      //   var newDist = Math.sqrt(Math.pow(size/2 - svg.select('.object').attr('cx'), 2) + Math.pow(size/2 - svg.select('.object').attr('cy'), 2));
-      //   console.log(svg.select('.object').attr('cx', function (d) { return d; }));
-      //   if (newDist < dist) {
-      //       svg.select('.object').style('fill', 'blue');
-      //   } else {
-      //       svg.select('.object').style('fill', 'red');
-      //   }
-      //   dist = newDist;
     });
   }
 
