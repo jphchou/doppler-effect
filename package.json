@@ -19,6 +19,6 @@
     "gh-pages": "^0.12.0"
   },
   "scripts": {
-    "deploy": "idyll build && gh-pages -d ./build"
+    "deploy": "idyll build --ssr=false && gh-pages -d ./build"
   }
 }

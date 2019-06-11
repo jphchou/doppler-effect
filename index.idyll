@@ -58,6 +58,12 @@ meters per second ([Display value:`velocity >= 0 ? "towards" : "away from"`/] th
 
 [/Conditional]
 
+## Doppler effect on sound
+The most common example of the Doppler effect is the sound of an object passing by quickly, like a car honking.
+A car passing by fast and honking will have a high pitch as it approaches, and a lower pitch as it passes by.
+In contrast, a car moving slowly and honking will have no perceived change in pitch.
+
+[CarPassing/]
 
 ## Redshift and Blueshift 
 The Doppler effect applies not only to sound waves, but to light waves as well. ***Redshift*** and ***blueshift*** describe how light shifts toward longer and shorter wavelengths as objects in space move closer and farther away from us. Because of this, when an object moves away from us, the light will decrease in frequency, shifting to the red end of the spectrum. When an object moves towards us, the light will increase in frequency, shifting to the blue end of the spectrum.
@@ -66,14 +72,6 @@ The Doppler effect applies not only to sound waves, but to light waves as well. 
 
 Redshift and blueshift have many applications in astronomy, primarily to detect the movements of objects. 
 For example, it can be used to tell if stars have planets around them - planets and stars orbit a common center of mass, so stars with planets around them slightly move, which can be detected by measuring their redshift and blueshift. It can also be used to calculate how far away distant galaxies are, as the further a galaxy is, the more redshifted it is.
-
-
-## Doppler effect on sound
-The most common example of the Doppler effect is the sound of an object passing by quickly, like a car honking.
-A car passing by fast and honking will have a high pitch as it approaches, and a lower pitch as it passes by.
-In contrast, a car moving slowly and honking will have no perceived change in pitch.
-
-[CarPassing/]
 
 ## Test Your Knowledge
 [var name:"redshift" value:`Math.random() >= 0.5` /]
