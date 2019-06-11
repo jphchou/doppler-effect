@@ -60,7 +60,7 @@ meters per second ([Display value:`velocity >= 0 ? "towards" : "away from"`/] th
 
 
 ## Redshift and Blueshift 
-Redshift and Blueshift describe how light shifts toward longer and shorter wavelengths as objects in space move closer and farther away from us. Because of this, when an object moves away from us, the light will shift to the red end of the spectrum and when an object moves towards us, the light will shift to the blue end of the spectrum.
+The Doppler effect applies not only to sound waves, but to light waves as well. ***Redshift*** and ***blueshift*** describe how light shifts toward longer and shorter wavelengths as objects in space move closer and farther away from us. Because of this, when an object moves away from us, the light will decrease in frequency, shifting to the red end of the spectrum. When an object moves towards us, the light will increase in frequency, shifting to the blue end of the spectrum.
 
 [RedshiftBlueshift/]
 
