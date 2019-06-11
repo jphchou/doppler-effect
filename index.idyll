@@ -60,9 +60,13 @@ meters per second ([Display value:`velocity >= 0 ? "towards" : "away from"`/] th
 
 
 ## Redshift and Blueshift 
-Redshift and Blueshift describe how light shifts toward longer and shorter wavelengths as objects in space move closer and farther away from us. Because of this, when an object moves away from us, the light will shift to the red end of the spectrum and when an object moves towards us, the light will shift to the blue end of the spectrum. Astronomers use Redshift and Blueshift to describe how far away objects in space are.
+Redshift and Blueshift describe how light shifts toward longer and shorter wavelengths as objects in space move closer and farther away from us. Because of this, when an object moves away from us, the light will shift to the red end of the spectrum and when an object moves towards us, the light will shift to the blue end of the spectrum.
 
 [RedshiftBlueshift/]
+
+Redshift and blueshift have many applications in astronomy, primarily to detect the movements of objects. 
+For example, it can be used to tell if stars have planets around them - planets and stars orbit a common center of mass, so stars with planets around them slightly move, which can be detected by measuring their redshift and blueshift. It can also be used to calculate how far away distant galaxies are, as the further a galaxy is, the more redshifted it is.
+
 
 ## Test Your Knowledge
 [var name:"redshift" value:`Math.random() >= 0.5` /]
