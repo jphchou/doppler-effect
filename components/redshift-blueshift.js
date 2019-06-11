@@ -49,11 +49,11 @@ class RedshiftBlueshift extends D3Component {
       var delta = (Date.now() - t0);
       svg.selectAll(".object")
         .attr("transform", function (d) {
-          return "rotate(" + d.phi0 + delta * d.speed / 200 + ")";
+          return "rotate(" + (d.phi0 + delta * d.speed / 200) % 360 + ")";
         })
         .style('fill', function (d) {
           let angle = (d.phi0 + delta * d.speed / 200) % 360
-          let hue = 60 + 60 * Math.sin((angle + 115) * Math.PI / 180)
+          let hue = 60 + 60 * Math.sin((angle + 10) * Math.PI / 180)
           return d3.hsl(hue, 0.7, 0.5)
         })
       container.attr("transform", "translate(" + (size / 2 + 80) + "," + size / 2 + ")");
