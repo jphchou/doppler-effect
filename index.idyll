@@ -15,10 +15,49 @@
 Have you ever heard the high-pitched sound of a siren approaching you and noticed how the sound dropped in pitch when it passed? This phenomenon is known as the Doppler effect. We observe the Doppler effect whenever the source of the waves we are observing (sound or light) moves. When the source is approaching, we experience an increase in frequency and vice versa when the source is receding. However, there is not actually a change in the frequency of the source, it just appears to change as the source moves to and away from us.
 
 ## Waves in Motion
-Cool description.
+Here, we have a stationary object (the blue circle) giving off sound waves (the gray rings). We can see that at all points, the distance between waves is equal as they travel outwards, so we would hear the same pitch no matter where we are relative to the object.
 
 [WaveBox/]
+
+
+
+What happens if the source of the sound starts to move? Click anywhere in the box below to make the source move in that direction.
+
 [InteractiveWaveBox/]
+
+We can see that the waves get clustered together in front of the object, and they spread apart farther behind the object. In practice, this means that the observed **frequency** in front of the object is higher, resulting in a higher-pitched sound. Likewise, the observed frequency behind the object is lower, resulting in a lower-pitched sound.
+
+
+[var name:"showMath" value:false/]
+[boolean value:showMath/] Show me the math!
+[Conditional if:`showMath`]
+[var name:"frequency" value:440 /]
+[var name:"velocity" value:50 /]
+
+The formula for the Doppler effect is 
+[Equation]
+  f = (\frac{c + v_r}{c + v_s}) f_0
+[/Equation]
+, where 
+[Equation]f[/Equation] 
+is the observed frequency, 
+[Equation]f_0[/Equation] 
+is the original frequency, 
+[Equation]c[/Equation] 
+is the speed of the wave, 
+[Equation]v_s[/Equation] 
+is the velocity of the source, and 
+[Equation]v_s[/Equation] 
+is the velocity of the receiver.
+
+For example, if we have sound waves that travel at 343 meters per second, a stationary receiver, and a source emitting waves at frequency 
+[Dynamic value:frequency min:100 max:2000 /]
+Hz moving at 
+[Dynamic value:velocity min:-300 max:300 /] 
+meters per second ([Display value:`velocity >= 0 ? "towards" : "away from"`/] the receiver), the perceieved frequency would be [Display value:`frequency * 343 / (343 - velocity)`/] Hz.
+
+[/Conditional]
+
 
 ## Redshift and Blueshift 
 Redshift and Blueshift describe how light shifts toward longer and shorter wavelengths as objects in space move closer and farther away from us. Because of this, when an object moves away from us, the light will shift to the red end of the spectrum and when an object moves towards us, the light will shift to the blue end of the spectrum. Astronomers use Redshift and Blueshift to describe how far away objects in space are.
