@@ -68,6 +68,13 @@ Redshift and blueshift have many applications in astronomy, primarily to detect 
 For example, it can be used to tell if stars have planets around them - planets and stars orbit a common center of mass, so stars with planets around them slightly move, which can be detected by measuring their redshift and blueshift. It can also be used to calculate how far away distant galaxies are, as the further a galaxy is, the more redshifted it is.
 
 
+## Doppler effect on sound
+The most common example of the Doppler effect is the sound of an object passing by quickly, like a car honking.
+A car passing by fast and honking will have a high pitch as it approaches, and a lower pitch as it passes by.
+In contrast, a car moving slowly and honking will have no perceived change in pitch.
+
+[CarPassing/]
+
 ## Test Your Knowledge
 [var name:"redshift" value:`Math.random() >= 0.5` /]
 [var name:"change" value:`Math.floor(Math.random() * 25) + 50` /]
@@ -108,6 +115,5 @@ Which direction is this star moving relative to the observer?
     hue = Math.floor(Math.random() * (255 - change)) + redshift ? change : 0
   `]Reset[/button]
 [/Conditional]
-
 
 [/section]
